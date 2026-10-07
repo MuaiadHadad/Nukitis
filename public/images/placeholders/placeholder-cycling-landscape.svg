@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#32434f"/><stop offset="1" stop-color="#c9a66b"/></linearGradient><linearGradient id="road" x2="0" y2="1"><stop stop-color="#152c39"/><stop offset="1" stop-color="#091720"/></linearGradient></defs>
+  <path fill="url(#sky)" d="M0 0h1200v800H0z"/><circle cx="285" cy="182" r="90" fill="#ffeba0" opacity=".35"/>
+  <path d="M0 382 137 220 385 441 629 262 905 454 1073 287 1200 389v411H0z" fill="#586a6d"/><path d="M0 515 248 402 631 563 905 420 1200 519v281H0z" fill="#213b45"/>
+  <path d="M185 800q535-68 369-193t285-124" fill="none" stroke="url(#road)" stroke-width="130"/><path d="M185 800q535-68 369-193t285-124" fill="none" stroke="#efce72" stroke-width="4" stroke-dasharray="24 28"/>
+  <g transform="translate(677 492)"><g fill="none" stroke="#05131e" stroke-width="9"><circle cx="-66" cy="85" r="54"/><circle cx="95" cy="85" r="54"/><path d="m-66 85 41-62 50 62h-91l68-7 38-73 55 80M10 5h35"/></g><g fill="#06131e"><circle cx="30" cy="-76" r="18"/><path d="m16-59-56 56 49 15 34-51 39 46 32-2-1-13-26-4-43-45z"/><path d="m-25-5-32 55 53 26-2 21 20 2 8-37-39-22 32-28z"/></g><path d="m16-59-35 35 26 22 37-37z" fill="#f6b82f"/></g>
+  <path d="M0 700 211 630 299 680 439 800H0z" fill="#112630"/><text x="1125" y="750" fill="#ffe7ac" font-family="Arial,sans-serif" font-size="18" letter-spacing="5" text-anchor="end" opacity=".65">NUKITIS / CYCLING</text>
+</svg>

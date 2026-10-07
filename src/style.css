@@ -1,0 +1,109 @@
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url("/fonts/barlow-condensed-latin-800.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #071827;
+  background: #07131e;
+  font-synthesis: none;
+  --gold: #f6b82f;
+  --metallic-gold: linear-gradient(180deg, #fff2a6 0%, #ffeba0 20%, #f7c247 52%, #e99718 100%);
+}
+
+* { box-sizing: border-box; }
+body { min-width: 280px; margin: 0; }
+a { color: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+::selection { color: #000; background: #ffd85a; }
+
+.brand__logo {
+  position: relative;
+  display: inline-block;
+  padding-left: .17em;
+  color: #c58b12;
+  background: var(--metallic-gold);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  font-weight: 900;
+  letter-spacing: .17em;
+  transform: scaleX(1.08);
+}
+
+.brand__registered {
+  position: absolute;
+  top: 0;
+  right: -8px;
+  font-size: 9px;
+  letter-spacing: 0;
+  -webkit-text-fill-color: #c58b12;
+}
+
+.product-facts {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  white-space: nowrap;
+  font-weight: 700;
+}
+.product-facts strong { font-size: 1.42em; }
+.product-facts .unit { font-size: .8em; }
+
+.product__slide { position: relative; isolation: isolate; margin: 0; min-width: 0; }
+.product__halo { position: absolute; z-index: -1; pointer-events: none; }
+.product__image { display: block; user-select: none; }
+
+.shop-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  text-decoration: none;
+  touch-action: manipulation;
+  font-weight: 800;
+  transition: transform 220ms cubic-bezier(.35, 0, 0, 1), background 220ms ease, box-shadow 220ms ease;
+}
+.shop-button:active { transform: scale(.975); }
+
+.carousel-controls { display: flex; align-items: center; justify-content: center; }
+.carousel-controls button {
+  display: grid;
+  place-items: center;
+  border: 0;
+  padding: 0;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+}
+.flavor-indicator__track { display: block; overflow: hidden; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .shop-button:hover { transform: translateY(-2px); box-shadow: 0 8px 24px #0003; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}

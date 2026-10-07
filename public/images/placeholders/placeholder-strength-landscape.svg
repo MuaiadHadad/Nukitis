@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#07111b"/><stop offset=".6" stop-color="#263542"/><stop offset="1" stop-color="#8e6530"/></linearGradient><radialGradient id="light"><stop stop-color="#ffd85a" stop-opacity=".3"/><stop offset="1" stop-color="#ffd85a" stop-opacity="0"/></radialGradient></defs>
+  <path fill="url(#bg)" d="M0 0h1200v800H0z"/><ellipse cx="850" cy="290" rx="480" ry="400" fill="url(#light)"/>
+  <path d="M180 0v650m230-650v650m660-650v650M0 650h1200M0 210h1200" stroke="#afbcc0" stroke-width="3" opacity=".2"/>
+  <path d="m750 0-210 650h350L1010 0" fill="#ffeba0" opacity=".035"/><path d="m0 800 250-150h720l230 150" fill="#06121c"/>
+  <path d="M130 800 330 650m190 150 40-150m270 150-80-150m330 150-130-150" stroke="#ddb455" stroke-width="2" opacity=".2"/>
+  <g fill="#09151e"><circle cx="615" cy="257" r="37"/><path d="m581 300 76 2 50 178-76 35-102-34z"/><path d="m583 320-46 120-118-47-12 32 147 60 49-100zm64 5 45 90 105-25 10 35-145 40-48-72z"/><path d="m569 479-39 157-33 90h54l57-173 25 173h58l-31-211z"/></g>
+  <path d="M347 392h538" stroke="#c6c7bf" stroke-width="12"/><g fill="#152a35" stroke="#ac893f" stroke-width="3"><rect x="370" y="327" width="35" height="137" rx="8"/><rect x="820" y="327" width="35" height="137" rx="8"/><rect x="340" y="343" width="24" height="103" rx="6"/><rect x="861" y="343" width="24" height="103" rx="6"/></g>
+  <text x="1125" y="750" fill="#ffe7ac" font-family="Arial,sans-serif" font-size="18" letter-spacing="5" text-anchor="end" opacity=".65">NUKITIS / STRENGTH</text>
+</svg>

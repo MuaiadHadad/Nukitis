@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs><linearGradient id="night" x2="1" y2="1"><stop stop-color="#07121b"/><stop offset=".6" stop-color="#203442"/><stop offset="1" stop-color="#57351a"/></linearGradient><radialGradient id="glow"><stop stop-color="#ffd85a" stop-opacity=".28"/><stop offset="1" stop-color="#ffd85a" stop-opacity="0"/></radialGradient></defs>
+  <path fill="url(#night)" d="M0 0h1920v1080H0z"/><ellipse cx="1430" cy="350" rx="800" ry="620" fill="url(#glow)"/>
+  <path d="M0 572 254 446 639 632 1022 402 1455 598 1769 420 1920 568v512H0z" fill="#0b1c28"/>
+  <g fill="none" stroke="#e9b747" stroke-width="5" opacity=".22"><ellipse cx="1020" cy="1210" rx="1280" ry="570"/><ellipse cx="1020" cy="1210" rx="1100" ry="485"/><ellipse cx="1020" cy="1210" rx="920" ry="400"/><ellipse cx="1020" cy="1210" rx="740" ry="315"/></g>
+  <path d="M0 686h1920M0 727h1920" stroke="#d2c090" opacity=".08"/>
+  <g stroke="#d7c69a" opacity=".08"><path d="M135 0v570m237-570v570m237-570v570m237-570v570m237-570v570m237-570v570m237-570v570m237-570v570"/></g>
+</svg>

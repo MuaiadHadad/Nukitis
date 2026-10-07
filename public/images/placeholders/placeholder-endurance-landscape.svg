@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#102639"/><stop offset="1" stop-color="#798b8a"/></linearGradient><linearGradient id="hill" x2="0" y2="1"><stop stop-color="#294957"/><stop offset="1" stop-color="#0d2029"/></linearGradient><linearGradient id="path" x2="1" y2=".3"><stop stop-color="#f6b82f"/><stop offset="1" stop-color="#d99838"/></linearGradient></defs>
+  <path fill="url(#sky)" d="M0 0h1200v800H0z"/><circle cx="905" cy="210" r="72" fill="#ffeba0" opacity=".65"/>
+  <path d="M0 490 255 145 479 442 670 208 951 501 1105 345 1200 443V800H0z" fill="#4f6973"/>
+  <path d="m255 145-69 93 62-25 39 42 21-38 38 42zM670 208l-82 108 53-20 33 21 18-23 68 55z" fill="#c7d5d4" opacity=".7"/>
+  <path d="M0 472 249 550 506 441 800 582 1020 485 1200 550V800H0z" fill="url(#hill)"/>
+  <path d="M250 800q510-125 268-211t237-52" stroke="url(#path)" stroke-width="48" fill="none"/>
+  <path d="M0 800V635l180-63 161 147 153-64 400 145z" fill="#0b1e28"/>
+  <g transform="translate(558 520)" fill="#06111b"><circle cx="13" cy="-40" r="15"/><path d="m5-25 26 6 15 47-18 7-11-30-13 28-27-11 12-22z"/><path d="m18 27 29 8 20 46-17 8-21-37-22 8-30 42-17-10 31-56z"/><path d="m-10-13-30 30-24-14 6-12 19 8 17-28z"/></g>
+  <path d="M0 750h1200" stroke="#b89b58" opacity=".2"/><text x="1125" y="750" fill="#ffe7ac" font-family="Arial,sans-serif" font-size="18" letter-spacing="5" text-anchor="end" opacity=".65">NUKITIS / ENDURANCE</text>
+</svg>

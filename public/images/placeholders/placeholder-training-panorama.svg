@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#1d3447"/><stop offset="1" stop-color="#091720"/></linearGradient><linearGradient id="track" x2="0" y2="1"><stop stop-color="#f6b82f"/><stop offset="1" stop-color="#8b511d"/></linearGradient></defs>
+  <path fill="url(#bg)" d="M0 0h1600v900H0z"/><path d="m0 490 205-165 223 215 261-253 229 235 179-172 503 251V900H0z" fill="#2a4653"/><path d="M0 627 318 535 792 679 1170 510 1600 664v236H0z" fill="#112a35"/>
+  <g fill="none" stroke="url(#track)" stroke-width="4" opacity=".75"><ellipse cx="800" cy="838" rx="940" ry="258"/><ellipse cx="800" cy="838" rx="810" ry="220"/><ellipse cx="800" cy="838" rx="680" ry="182"/><ellipse cx="800" cy="838" rx="550" ry="144"/><ellipse cx="800" cy="838" rx="420" ry="106"/></g>
+  <g stroke="#ffe7a3" opacity=".35"><path d="m190 600 207 264m96-283 98 268m361-268-43 291m248-277-200 271"/></g>
+  <g transform="translate(355 560)" fill="#07131e"><circle cx="5" cy="-35" r="16"/><path d="m0-18 30 4 12 50-20 7-12-29-20 25-22-15 12-26z"/><path d="m12 31 34 16 19 64-21 5-21-51-25 1-42 54-19-15 43-72z"/></g>
+  <g transform="translate(1250 570)" fill="#07131e"><circle cx="5" cy="-35" r="16"/><path d="m0-18 30 4 12 50-20 7-12-29-20 25-22-15 12-26z"/><path d="m12 31 34 16 19 64-21 5-21-51-25 1-42 54-19-15 43-72z"/></g>
+  <text x="1520" y="850" fill="#ffeba0" font-family="Arial,sans-serif" font-size="20" letter-spacing="6" text-anchor="end" opacity=".6">NUKITIS / NEXT LEVEL</text>
+</svg>

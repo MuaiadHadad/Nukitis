@@ -1,0 +1,20 @@
+{
+  "name": "NUKITIS",
+  "version": "1.0.0",
+  "description": "NUKITIS premium performance nutrition campaign",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "pretest": "npm run build",
+    "test": "playwright test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^6.0.3",
+    "vite": "^7.1.0",
+    "@playwright/test": "^1.56.0"
+  },
+  "private": true
+}

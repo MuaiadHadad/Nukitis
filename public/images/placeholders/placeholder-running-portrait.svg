@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200">
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#283f4d"/><stop offset="1" stop-color="#091720"/></linearGradient><radialGradient id="halo"><stop stop-color="#f6b82f" stop-opacity=".35"/><stop offset="1" stop-color="#f6b82f" stop-opacity="0"/></radialGradient></defs>
+  <path fill="url(#bg)" d="M0 0h900v1200H0z"/><ellipse cx="490" cy="390" rx="500" ry="500" fill="url(#halo)"/><path d="M0 880 160 690 290 835 484 620 741 844 900 710v490H0z" fill="#142c38"/>
+  <g transform="translate(380 520)" fill="#07121d"><circle cx="33" cy="-122" r="58"/><path d="m7-60 79 4 53 191-58 28-45-111-54 120-93-55 40-104z"/><path d="m31 133 106 61 86 231-59 18-94-201-103 11-138 202-54-33 149-249z"/><path d="m-19-29-134 110-86-60-21 32 112 103L-3 53zM84-30l106 77 121-62 16 30-135 94L79 52z"/></g>
+  <path d="m160 1120 560-105" stroke="#f6b82f" stroke-width="8"/><path d="m190 1160 560-105" stroke="#f6b82f" stroke-width="2" opacity=".5"/>
+  <text x="70" y="1080" fill="#ffeba0" font-family="Arial,sans-serif" font-size="22" letter-spacing="7">NUKITIS / RUNNING</text>
+</svg>
