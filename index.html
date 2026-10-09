@@ -19,7 +19,7 @@
     <header class="site-header">
       <div class="site-header__left">
         <button class="icon-button menu-toggle" type="button" aria-label="Open menu" aria-haspopup="dialog" aria-controls="site-menu" aria-expanded="false"><span class="menu-dots" aria-hidden="true"></span></button>
-        <a class="brand__logo site-logo" href="/" data-route="/" aria-label="NUKITIS home">NUKITIS<span class="brand__registered" aria-hidden="true">&reg;</span></a>
+        <a class="site-logo" href="/" data-route="/" aria-label="NUKITIS home"><img class="site-logo__image" src="/images/nukitis-logo.png" width="2172" height="724" alt="" aria-hidden="true" /></a>
       </div>
       <nav class="desktop-nav" aria-label="Main navigation">
         <div class="nav-group">
@@ -94,9 +94,8 @@
           <button class="outline-button mobile-view-all" type="button" data-detail="events-intro">Explore events <span aria-hidden="true">&#8250;</span></button>
         </section>
         <section class="feature-banner content-width" id="training" aria-labelledby="training-title">
-          <img src="/images/placeholders/placeholder-training-panorama.svg" width="1600" height="900" loading="lazy" alt="Original placeholder illustration for a NUKITIS training campaign, showing an abstract running track and mountain landscape." />
+          <picture><source media="(max-width: 767px)" srcset="/images/editorial/campaign-training-mobile.webp" /><img src="/images/editorial/campaign-training-desktop.webp" width="1672" height="941" loading="lazy" alt="Athlete accelerating through a sunlit performance gym" /></picture>
           <div class="feature-banner__copy"><p class="kicker">EVERYDAY PERFORMANCE</p><h2 id="training-title">Your next level<br>starts here.</h2><p>A little preparation. A lot of possibility.<br>Find a routine that moves with you.</p><button type="button" class="primary-button" data-detail="routine">Explore your routine <span aria-hidden="true">&#8594;</span></button></div>
-          <span class="media-placeholder-label">TRAINING CAMPAIGN / MEDIA PLACEHOLDER</span>
         </section>
         <section class="content-section" id="performance" aria-labelledby="performance-title">
           <div class="section-heading"><h2 id="performance-title">Athletes &amp; disciplines</h2><button class="outline-button section-view-all" type="button" data-detail="athletes-intro">Explore all <span aria-hidden="true">&#8250;</span></button></div>
@@ -120,7 +119,7 @@
     <footer class="site-footer">
       <div class="content-width footer-grid">
         <nav aria-label="Company"><a href="/#nutrition">Products &amp; company</a><a href="https://www.nukitis.com/">Official NUKITIS store</a><a href="/#stories">Stories &amp; inspiration</a><a href="/#events">Community events</a><a href="/#performance">Performance</a></nav>
-        <nav aria-label="Information"><button type="button" data-detail="privacy">Privacy &amp; this website</button><button type="button" data-detail="accessibility">Accessibility</button><button type="button" data-detail="media-info">About the media placeholders</button><button type="button" data-detail="brand-info">Swiss Nutrition Technology</button><a href="#campaign">Back to the top &#8593;</a></nav>
+        <nav aria-label="Information"><button type="button" data-detail="privacy">Privacy &amp; this website</button><button type="button" data-detail="accessibility">Accessibility</button><button type="button" data-detail="media-info">About the campaign media</button><button type="button" data-detail="brand-info">Swiss Nutrition Technology</button><a href="#campaign">Back to the top &#8593;</a></nav>
         <p class="footer-copyright">&copy; <span id="year">2026</span> NUKITIS<br><span>SWISS PRECISION. NO COMPROMISE.</span></p>
       </div>
     </footer>

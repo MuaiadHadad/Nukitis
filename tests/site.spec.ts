@@ -111,9 +111,13 @@ test("rails, event tabs, and discovery pagination", async ({ page }) => {
 test("header remains fixed while scrolling; menus lock background scroll", async ({ page }) => {
   await page.goto("/");
   const header = page.locator(".site-header");
+  const logo = page.locator(".site-logo");
+  const logoAtTop = await logo.boundingBox();
   await page.evaluate(() => scrollTo({ top: 1000, behavior: "instant" }));
   await expect(header).toHaveClass(/is-scrolled/);
   await expect(header).toHaveCSS("position", "fixed");
+  expect(await logo.boundingBox()).toEqual(logoAtTop);
+  await expect(logo.locator("img")).toHaveCSS("opacity", "1");
   await page.evaluate(() => scrollTo({ top: 0, behavior: "instant" }));
   await expect(header).not.toHaveClass(/is-scrolled/);
   await page.getByRole("button", { name: "Open menu" }).click();
