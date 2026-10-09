@@ -41,6 +41,11 @@ export function initRouter() {
     document.title = route.page === "home"
       ? "NUKITIS | Performance Nutrition"
       : route.page === "cart" ? "NUKITIS | Cart" : route.page === "checkout" ? "NUKITIS | Checkout" : `NUKITIS ${route.flavor === "chocolate" ? "Chocolate" : "Vanilla"} | ${route.page === "ingredients" ? "Ingredients" : "Protein Shake"}`;
+    document.querySelectorAll<HTMLAnchorElement>("a[data-route]").forEach(anchor => {
+      const isCurrent = new URL(anchor.href, window.location.href).pathname === pathname;
+      if (isCurrent) anchor.setAttribute("aria-current", "page");
+      else anchor.removeAttribute("aria-current");
+    });
     if (route.page === "product") {
       renderProductDetail(campaign, route.flavor as ProductFlavor, path => navigate(path));
     }

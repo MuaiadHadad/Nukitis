@@ -17,11 +17,9 @@ for (const width of [1920, 1440, 1024, 768, 430, 390, 375]) {
       return { hero: rect(".home-hero"), editorial: rect(".editorial"), heading: rect("#nutrition-title"), card: rect("#nutrition-track .content-card"), header: rect(".site-header"), logo: rect(".site-logo"), nav: rect(".desktop-nav"), viewport: window.innerWidth, width: document.documentElement.scrollWidth };
     });
     const viewportHeight = width >= 1024 ? 900 : width >= 768 ? 1024 : width === 375 ? 812 : width === 430 ? 932 : 844;
-    const expectedHero = width >= 1024
-      ? Math.min(815, Math.max(650, viewportHeight * .85))
-      : Math.min(640, Math.max(550, viewportHeight * .69));
+    const expectedHero = Math.max(width >= 1024 ? 650 : width >= 768 ? 620 : 600, viewportHeight);
     expect(geometry.hero.height).toBeCloseTo(expectedHero, 0);
-    expect(geometry.editorial.y).toBeCloseTo(expectedHero - 16, 0);
+    expect(geometry.editorial.y).toBeCloseTo(expectedHero, 0);
     expect(geometry.heading.x).toBe(width >= 1600 ? (width - 1472) / 2 : width >= 1024 ? 64 : width >= 768 ? 40 : 16);
     expect(geometry.width).toBeLessThanOrEqual(width);
     if (width >= 1024) {
@@ -110,18 +108,35 @@ test("rails, event tabs, and discovery pagination", async ({ page }) => {
   await expect(page.getByRole("button", { name: "You're all caught up" })).toBeDisabled();
 });
 
-test("header hides down and returns up; menus lock background scroll", async ({ page }) => {
+test("header remains fixed while scrolling; menus lock background scroll", async ({ page }) => {
   await page.goto("/");
   const header = page.locator(".site-header");
   await page.evaluate(() => scrollTo({ top: 1000, behavior: "instant" }));
-  await expect(header).toHaveClass(/is-hidden/);
-  await page.evaluate(() => scrollTo({ top: 850, behavior: "instant" }));
-  await expect(header).not.toHaveClass(/is-hidden/);
   await expect(header).toHaveClass(/is-scrolled/);
+  await expect(header).toHaveCSS("position", "fixed");
+  await page.evaluate(() => scrollTo({ top: 0, behavior: "instant" }));
+  await expect(header).not.toHaveClass(/is-scrolled/);
   await page.getByRole("button", { name: "Open menu" }).click();
   expect(await page.evaluate(() => getComputedStyle(document.documentElement).overflow)).toBe("hidden");
   await page.keyboard.press("Escape");
   await expect.poll(() => page.evaluate(() => getComputedStyle(document.documentElement).overflow)).not.toBe("hidden");
+});
+
+test("video hero has autoplay safeguards and a reduced-motion poster", async ({ page }) => {
+  await page.goto("/");
+  const video = page.locator(".home-hero__video");
+  await expect(page.locator(".home-hero__copy > *")).toHaveCount(2);
+  await expect(page.locator(".home-hero__copy")).toHaveCSS("text-align", "left");
+  await expect(page.locator(".home-hero").getByRole("link")).toHaveCount(0);
+  await expect(video).toHaveAttribute("autoplay", "");
+  await expect(video).toHaveAttribute("muted", "");
+  await expect(video).toHaveAttribute("loop", "");
+  await expect(video).toHaveAttribute("playsinline", "");
+  await expect(video).not.toHaveAttribute("controls", /.+/);
+  await expect(video).toHaveCSS("pointer-events", "none");
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await expect(video).toHaveCSS("display", "none");
+  await expect(page.locator(".home-hero")).toHaveCSS("background-image", /hero-video-poster\.jpg/);
 });
 
 test("desktop rail drag scrolls without opening a story", async ({ page }) => {

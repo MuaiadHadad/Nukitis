@@ -95,20 +95,15 @@ export function initNavigation() {
     const flavor = anchor.dataset.selectFlavor;
     if (flavor) document.querySelector<HTMLButtonElement>(`.flavor-indicator[data-flavor="${flavor}"]`)!.click();
   });
-  let lastY = window.scrollY;
   let queued = false;
+  const syncHeaderState = () => header.classList.toggle("is-scrolled", window.scrollY > 80);
   window.addEventListener("scroll", () => {
     if (queued) return;
     queued = true;
     requestAnimationFrame(() => {
-      const y = window.scrollY;
-      header.classList.toggle("is-scrolled", y > 80);
-      if (Math.abs(y - lastY) > 4) {
-        header.classList.toggle("is-hidden", y > 180 && y > lastY && !header.contains(document.activeElement));
-        lastY = y;
-      }
+      syncHeaderState();
       queued = false;
     });
   }, { passive: true });
-  header.addEventListener("focusin", () => header.classList.remove("is-hidden"));
+  syncHeaderState();
 }

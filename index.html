@@ -8,6 +8,7 @@
     <title>NUKITIS | Performance Nutrition. On Demand.</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preload" href="/fonts/barlow-condensed-latin-800.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/images/hero-video-poster.jpg" as="image" type="image/jpeg" />
     <link rel="preload" as="image" type="image/webp" href="/images/nukitis-chocolate-960.webp" imagesrcset="/images/nukitis-chocolate-640.webp 640w, /images/nukitis-chocolate-960.webp 960w, /images/nukitis-chocolate-1320.webp 1320w" imagesizes="(min-width: 1024px) 620px, (min-width: 768px) 460px, calc(100vw - 24px)" />
     <link rel="preload" as="image" type="image/webp" href="/images/nukitis-vanilla-960.webp" imagesrcset="/images/nukitis-vanilla-640.webp 640w, /images/nukitis-vanilla-960.webp 960w, /images/nukitis-vanilla-1320.webp 1320w" imagesizes="(min-width: 1024px) 620px, (min-width: 768px) 460px, calc(100vw - 24px)" />
     <link rel="stylesheet" href="/src/style.css" />
@@ -45,17 +46,14 @@
     </header>
     <main id="main">
       <section class="home-hero" id="home" aria-labelledby="home-title">
-        <img class="home-hero__backdrop" src="/images/placeholders/placeholder-hero-performance.svg" width="1920" height="1080" alt="" aria-hidden="true" fetchpriority="high" />
+        <video class="home-hero__video" autoplay muted loop playsinline preload="metadata" poster="/images/hero-video-poster.jpg" aria-hidden="true" tabindex="-1">
+          <source src="/videos/nukitis-hero.webm" type="video/webm" />
+          <source src="/videos/nukitis-hero.mp4" type="video/mp4" />
+        </video>
         <div class="home-hero__shade" aria-hidden="true"></div>
-        <div class="home-hero__product" aria-hidden="true">
-          <img src="/images/nukitis-chocolate-1320.webp" width="1320" height="1167" alt="" fetchpriority="high" decoding="async" />
-        </div>
         <div class="home-hero__copy">
           <p class="home-hero__kicker">SWISS NUTRITION TECHNOLOGY</p>
           <h1 id="home-title">Performance nutrition.<br>On demand.</h1>
-          <p class="home-hero__lead">35 g protein. Twenty individual servings. Made for the moments that ask more of you.</p>
-          <a class="home-hero__cta" href="/products/chocolate" data-route="/products/chocolate">Discover Chocolate <span aria-hidden="true">&#8594;</span></a>
-          <div class="home-hero__meta"><span class="home-hero__dot is-active"></span><span class="home-hero__dot"></span><span>NUKITIS CHOCOLATE</span></div>
         </div>
       </section>
 

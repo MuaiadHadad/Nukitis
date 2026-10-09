@@ -3,7 +3,7 @@ import { expect, test } from "@playwright/test";
 test("homepage products route to the correct experience and history restores state", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/");
-  await page.getByRole("link", { name: "Discover Chocolate" }).click();
+  await page.locator("#nutrition-track").getByRole("link", { name: "Explore NUKITIS Chocolate" }).first().click();
   await expect(page).toHaveURL(/\/products\/chocolate$/);
   await expect(page.locator("body")).toHaveAttribute("data-page", "product");
   await expect(page.locator(".detail-hero")).toHaveAttribute("data-flavor", "chocolate");
